@@ -1,5 +1,6 @@
 using Enigma.DatingNet.Repositories;
 using SimpleProductApi.Entities;
+using SimpleProductApi.Models.Response;
 using SimpleProductApi.Repositories;
 
 namespace SimpleProductApi.Services;
@@ -27,15 +28,44 @@ public class ProductService : IProductService
 
     public async Task<Product> GetById(string id)
     {
-        var product = await _repository.FindByIdAsync(Guid.Parse(id));
+        var product = await _repository.FindAsync(p => p.Id == Guid.Parse(id), new[] { "Category" });
         if (product == null) throw new Exception("product not found");
         return product;
     }
 
-    public async Task<List<Product>> GetAll()
+    public async Task<List<ProductResponse>> GetAll()
     {
-        var products = await _repository.FindAllAsync();
-        return products.ToList();
+        var products = await _repository.FindAllAsync(new[] { "Category" });
+        // Looping for
+
+        // List<ProductResponse> productResponses = new List<ProductResponse>();
+        // foreach (var product in products)
+        // {
+        //     productResponses.Add(new ProductResponse
+        //     {
+        //         Id = default,
+        //         Name = null,
+        //         Price = 0,
+        //         Stock = 0,
+        //         Category = null
+        //     });
+        // }
+
+        var productResponses = products.Select(product => new ProductResponse
+        {
+            Id = product.Id,
+            Name = product.Name,
+            Price = product.Price,
+            Stock = product.Stock,
+            Category = new CategoryResponse
+            {
+                Id = product.CategoryId,
+                Name = product.Category.Name,
+                ProductId = product.Id
+            }
+        }).ToList();
+        
+        return productResponses;
     }
 
     public async Task<Product> Update(Product product)

@@ -10,4 +10,7 @@ public class Product
     [Column(name: "name")] public string Name { get; set; }
     [Column(name: "price")] public int Price { get; set; }
     [Column(name: "stock")] public int Stock { get; set; }
+
+    [Column(name: "category_id")] public Guid CategoryId { get; set; }
+    public Category? Category { get; set; }
 }
