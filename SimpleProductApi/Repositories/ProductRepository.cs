@@ -13,7 +13,7 @@ public class ProductRepository : IProductRepository
 
     public Product Save(Product product)
     {
-        product.Id = Guid.NewGuid().ToString();
+        // product.Id = Guid.NewGuid().ToString();
         var entityEntry = _dbContext.Products.Add(product);
         _dbContext.SaveChanges();
         return entityEntry.Entity;
@@ -21,7 +21,8 @@ public class ProductRepository : IProductRepository
 
     public Product? FindById(string id)
     {
-        return _dbContext.Products.FirstOrDefault(product => product.Id == id);
+        // return _dbContext.Products.FirstOrDefault(product => product.Id == id);
+        return null;
     }
 
     public List<Product> FindAll()

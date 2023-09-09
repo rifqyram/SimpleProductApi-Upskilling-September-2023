@@ -15,28 +15,31 @@ public class ProductController : BaseController
     }
 
     [HttpPost]
-    public Product CreateProduct([FromBody] Product product)
+    public async Task<IActionResult> CreateProduct([FromBody] Product payload)
     {
-        return _productService.Create(product);
+        var product = await _productService.Create(payload);
+        return Created("/api/v1/products", product);
     }
 
     [HttpPut]
-    public Product UpdateProduct([FromBody] Product product)
+    public async Task<IActionResult> UpdateProduct([FromBody] Product payload)
     {
-        return _productService.Update(product);
+        var update = await _productService.Update(payload);
+        return Ok(update);
     }
 
     [HttpGet]
-    public List<Product> GetList()
+    public async Task<IActionResult> GetList()
     {
-        return _productService.GetAll();
+        var products = await _productService.GetAll();
+        return Ok(products);
     }
 
     // /api/products/:id
     [HttpDelete("{id}")]
-    public string DeleteById(string id)
+    public async Task<IActionResult> DeleteById(string id)
     {
-        _productService.DeleteById(id);
-        return "OK";
+        await _productService.DeleteById(id);
+        return NoContent();
     }
 }

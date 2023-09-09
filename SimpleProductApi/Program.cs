@@ -1,3 +1,5 @@
+using Enigma.DatingNet.Repositories;
+using Enigma.DatingNet.Repositories.Impls;
 using Microsoft.EntityFrameworkCore;
 using SimpleProductApi.Repositories;
 using SimpleProductApi.Services;
@@ -13,8 +15,9 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
         .GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
+builder.Services.AddTransient<IPersistence, DbPersistence>();
 builder.Services.AddTransient<IProductService, ProductService>();
-
+builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

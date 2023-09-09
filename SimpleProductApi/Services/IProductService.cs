@@ -4,9 +4,9 @@ namespace SimpleProductApi.Services;
 
 public interface IProductService
 {
-    Product Create(Product product);
-    Product GetById(string id);
-    List<Product> GetAll();
-    Product Update(Product product);
-    void DeleteById(string id);
+    Task<Product> Create(Product product);
+    Task<Product> GetById(string id);
+    Task<List<Product>> GetAll();
+    Task<Product> Update(Product product);
+    Task DeleteById(string id);
 }
