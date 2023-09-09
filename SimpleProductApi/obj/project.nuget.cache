@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "QNB5Ms36aHyTkjBCj9H56lukodng5eKcbzPOVPnqTMHlZ6hH/vxSkHma4zBZF87JBg0HO1YAG+lyBQAk4m3BGQ==",
+  "dgSpecHash": "HxkQtZwjtqaBP7X0gGtGrLOWqTvMaOHcFof4hIUtq6TEAxL79GybLNEFfzMSkvIY7t9gr2cpfQ1xQ1WhidTvvw==",
   "success": true,
   "projectFilePath": "/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/SimpleProductApi.csproj",
   "expectedPackageFiles": [
     "/Users/user/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/user/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/user/.nuget/packages/npgsql/6.0.9/npgsql.6.0.9.nupkg.sha512",
     "/Users/user/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/user/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/user/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/user/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "/Users/user/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/user/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

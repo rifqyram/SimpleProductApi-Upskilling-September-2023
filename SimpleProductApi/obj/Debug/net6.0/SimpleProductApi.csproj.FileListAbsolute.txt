@@ -25,3 +25,4 @@
 /Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/obj/Debug/net6.0/SimpleProductApi.pdb
 /Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/obj/Debug/net6.0/SimpleProductApi.genruntimeconfig.cache
 /Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/obj/Debug/net6.0/ref/SimpleProductApi.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Npgsql.dll
