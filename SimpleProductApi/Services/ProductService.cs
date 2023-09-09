@@ -12,14 +12,13 @@ public class ProductService : IProductService
         _productRepository = productRepository;
     }
 
-    public void Create(Product product)
+    public Product Create(Product product)
     {
-        _productRepository.Save(product);
+        return _productRepository.Save(product);
     }
 
     public Product GetById(string id)
     {
-        // Product? product = _productRepository.FindById(id);
         var product = _productRepository.FindById(id);
         if (product != null) return product;
         throw new Exception("product not found");
@@ -28,6 +27,11 @@ public class ProductService : IProductService
     public List<Product> GetAll()
     {
         return _productRepository.FindAll();
+    }
+
+    public Product Update(Product product)
+    {
+        return _productRepository.Update(product);
     }
 
     public void DeleteById(string id)

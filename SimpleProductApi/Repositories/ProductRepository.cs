@@ -11,27 +11,34 @@ public class ProductRepository : IProductRepository
         _dbContext = dbContext;
     }
 
-    public void Save(Product product)
+    public Product Save(Product product)
     {
         product.Id = Guid.NewGuid().ToString();
-        // INSERT INTO product ...
-        // EF Core -> Tracking Status
-        _dbContext.Products.Add(product);
+        var entityEntry = _dbContext.Products.Add(product);
         _dbContext.SaveChanges();
+        return entityEntry.Entity;
     }
 
     public Product? FindById(string id)
     {
-        return null;
+        return _dbContext.Products.FirstOrDefault(product => product.Id == id);
     }
 
     public List<Product> FindAll()
     {
-        return null;
+       return _dbContext.Products.ToList();
+    }
+
+    public Product Update(Product product)
+    {
+        var entity = _dbContext.Products.Attach(product);
+        var entry = _dbContext.Products.Update(entity.Entity);
+        _dbContext.SaveChanges();
+        return entry.Entity;
     }
 
     public void Delete(Product product)
     {
-        // _products.Remove(product);
+        _dbContext.Products.Remove(product);
     }
 }
