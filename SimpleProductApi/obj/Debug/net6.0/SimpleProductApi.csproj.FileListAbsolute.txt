@@ -26,3 +26,12 @@
 /Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/obj/Debug/net6.0/SimpleProductApi.genruntimeconfig.cache
 /Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/obj/Debug/net6.0/ref/SimpleProductApi.dll
 /Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Npgsql.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Humanizer.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/user/RiderProjects/SimpleProductApi/SimpleProductApi/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll

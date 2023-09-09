@@ -14,7 +14,6 @@ public class ProductService : IProductService
 
     public void Create(Product product)
     {
-        product.Id = Guid.NewGuid().ToString();
         _productRepository.Save(product);
     }
 
